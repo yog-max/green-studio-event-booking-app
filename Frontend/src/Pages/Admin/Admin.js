@@ -30,7 +30,6 @@ function Admin() {
     }
   }, []);
 
-  // ── GET USERS ──
   async function getUsers() {
     try {
       const result = await axios.get(API_URLS.GET_USERS);
@@ -41,7 +40,6 @@ function Admin() {
     }
   }
 
-  // ── GET BOOKINGS ──
   async function getBookings() {
     try {
       const result = await axios.get(API_URLS.GET_BOOKINGS);
@@ -52,12 +50,10 @@ function Admin() {
     }
   }
 
-  // ── RANDOM VISITORS ──
   function generateVisitors() {
     setVisitors(Math.floor(Math.random() * 200) + 50);
   }
 
-  // ── DELETE USER ──
   const deleteUser = async (userId) => {
     const result = await Swal.fire({
       title: "Are you sure?",
@@ -80,7 +76,6 @@ function Admin() {
     }
   };
 
-  // ── DELETE BOOKING ──
   const deleteBooking = async (eventId) => {
     const result = await Swal.fire({
       title: "Are you sure?",
@@ -103,7 +98,6 @@ function Admin() {
     }
   };
 
-  // ── APPROVE BOOKING ──
   const approveBooking = async (eventId) => {
     try {
       await axios.patch(API_URLS.APPROVE_BOOKING(eventId));
@@ -114,7 +108,6 @@ function Admin() {
     }
   };
 
-  // ── REJECT BOOKING ──
   const rejectBooking = async (eventId) => {
     try {
       await axios.patch(API_URLS.REJECT_BOOKING(eventId));
@@ -125,7 +118,6 @@ function Admin() {
     }
   };
 
-  // ── STATUS BADGE STYLE ──
   const getStatusStyle = (status) => {
     switch (status?.toUpperCase()) {
       case "APPROVED":
@@ -143,7 +135,6 @@ function Admin() {
     <div className="w-full min-h-screen overflow-x-hidden
                     bg-gray-100 px-4 md:px-10 py-8 pb-20">
 
-    {/* logout button and header */}
      <div className="flex justify-between items-center mb-8">
   <h1 className="text-2xl md:text-4xl font-bold text-cyan-900 tracking-wide">
      Admin Dashboard
@@ -158,10 +149,8 @@ function Admin() {
   </button>
 </div>
 
-      {/* ── DASHBOARD STAT BOXES ── */}
       <div className="flex flex-wrap justify-center gap-6 mb-10">
 
-        {/* Total Registrations */}
         <div
           onClick={() => { setShowUsers(!showUsers); setShowBookings(false); }}
           className="w-48 md:w-56 bg-white rounded-2xl shadow-lg
@@ -181,7 +170,6 @@ function Admin() {
           </p>
         </div>
 
-        {/* Total Bookings */}
         <div
           onClick={() => { setShowBookings(!showBookings); setShowUsers(false); }}
           className="w-48 md:w-56 bg-white rounded-2xl shadow-lg
@@ -297,7 +285,6 @@ function Admin() {
         </div>
       )}
 
-      {/* ── BOOKINGS TABLE ── */}
       {showBookings && (
         <div className="mb-10">
 
