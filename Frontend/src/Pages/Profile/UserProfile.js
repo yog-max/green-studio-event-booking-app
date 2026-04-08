@@ -167,28 +167,28 @@ function MyProfile() {
               <thead>
                 <tr className="bg-green-600 text-white text-sm">
                   <th className="px-4 py-4 text-left font-semibold whitespace-nowrap">
-                    👤 Full Name
+                     Full Name
                   </th>
                   <th className="px-4 py-4 text-left font-semibold whitespace-nowrap">
-                    📱 Mobile No
+                     Mobile No
                   </th>
                   <th className="px-4 py-4 text-left font-semibold whitespace-nowrap">
-                    📍 Location
+                     Location
                   </th>
                   <th className="px-4 py-4 text-left font-semibold whitespace-nowrap">
-                    🎭 Event Type
+                     Event Type
                   </th>
                   <th className="px-4 py-4 text-left font-semibold whitespace-nowrap">
-                    📅 Start Date
+                     Start Date
                   </th>
                   <th className="px-4 py-4 text-left font-semibold whitespace-nowrap">
-                    📅 End Date
+                     End Date
                   </th>
                   <th className="px-4 py-4 text-left font-semibold whitespace-nowrap">
-                    🏛️ Event Location
+                     Event Location
                   </th>
                   <th className="px-4 py-4 text-left font-semibold whitespace-nowrap">
-                    🔖 Status
+                     Status
                   </th>
                 </tr>
               </thead>
